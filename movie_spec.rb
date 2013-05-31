@@ -33,4 +33,13 @@ describe Movie do
     @movie.rank.should == @initial_rank - 1
   end
   
+  context "created with a default rank" do
+    before do
+      @movie = Movie.new("goonies")
+    end
+    
+    it "has a rank of 0" do
+      @movie.rank.should == 0
+    end
+  end
 end
