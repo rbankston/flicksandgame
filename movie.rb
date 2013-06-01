@@ -8,7 +8,7 @@ class Movie
   end
 
   def to_s
-    "#{@title} has a rank of #{normalized_rank}"
+    "#{@title} has a rank of #{normalized_rank} (#{status})"
   end
   
   def normalized_rank
@@ -22,6 +22,14 @@ class Movie
   def thumbs_down
     @rank -= 1
   end
-
+  
+  def hit?
+    @rank >= 10
+  end
+  
+  def status
+    hit? ? "Hit" : "Flop"
+  end
+  
   
 end
