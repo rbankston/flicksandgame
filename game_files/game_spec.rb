@@ -8,4 +8,6 @@ describe Game do
   it "has players"
   
   it "has a title"
+  
+  it "has a score"
 end
