@@ -35,4 +35,23 @@ describe Player do
     @player.health.should == @initial_health - 10
   end
   
+  context "it is strong with health greater than 100" do
+    before do
+      @player = Player.new("larry", 150)
+    end
+    
+    it "is strong" do
+    @player.should be_strong
+    end
+  end
+  
+  context "it is weak with health less than 100" do
+    before do
+      @player = Player.new("larry", 50)
+    end
+    
+    it "is weak" do
+      @player.should_not be_strong
+    end
+  end
 end
