@@ -1,9 +1,13 @@
-require 'playlist'
+require_relative 'playlist'
 
 describe Playlist do
   
   before do
     @playlist = Playlist.new("Kermit")
+  end
+  
+  it "has a name" do
+    @play.name.should == "Kermit"
   end
   
   context "being played with one movie" do
@@ -13,7 +17,5 @@ describe Playlist do
       @playlist.add_movie(@movie)
     end
     
-    it "gives the movie a thumbs up if a high number is rolled" do
-      @playlist.play(5)
-      
-      @movie.rank.should == @initial_rank
+  end
+end

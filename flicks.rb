@@ -1,10 +1,11 @@
 require_relative "movie"
+require_relative "playlist"
 movie1 = Movie.new("goonies", 100)
 movie2 = Movie.new("ghostbuster", 9)
+movie3 = Movie.new("goldfinger")
 
-puts movie1
-puts movie2
-movie1.thumbs_up
-movie1.title = "Gooneys!"
-
-puts movie1.normalized_rank
+playlist = Playlist.new("Kermit")
+playlist.add_movie(movie1)
+playlist.add_movie(movie2)
+playlist.add_movie(movie3)
+playlist.play
