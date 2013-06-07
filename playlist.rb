@@ -9,15 +9,15 @@ class Playlist
     @movies = []
   end
 
-  def add_movie(movie)
-    @movies << movie
+  def add_movie(a_movie)
+    @movies << a_movie
   end
 
   def roll_die
     rand(1..6)
   end
 
-  def play(number_roll)
+  def play
     puts "#{@name}'s playlist:"
     
     puts @movies

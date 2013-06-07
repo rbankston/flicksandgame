@@ -1,18 +1,11 @@
 class Movie
+  
   attr_reader :rank
   attr_accessor :title
   
   def initialize(title, rank=0)
     @title = title.capitalize
     @rank = rank
-  end
-
-  def to_s
-    "#{@title} has a rank of #{normalized_rank} (#{status})"
-  end
-  
-  def normalized_rank
-    @rank
   end
   
   def thumbs_up
@@ -31,5 +24,18 @@ class Movie
     hit? ? "Hit" : "Flop"
   end
   
+  def to_s
+    "#{@title} has a rank of #{@rank} (#{status})"
+  end
+end
+  
+  if __FILE__ == $0
+    movie = Movie.new("goonies", 10)
+    puts movie.title
+    puts movie.rank
+    movie.thumbs_up
+    puts movie.rank
+    movie.thumbs_down
+    puts movie.rank
   
 end
