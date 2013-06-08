@@ -19,7 +19,7 @@ describe Playlist do
     end
     
     it "gives the movie  thumbs up" do
-      @playlist.stub(:roll_die).and_return(6)
+      WaldorfAndStatler.stub(:roll_die).and_return(6)
       
       @playlist.play
       
@@ -33,7 +33,7 @@ describe Playlist do
   end
   
   it "skips the movie if a medium number is rolled" do
-    @playlist.stub(:roll_die).and_return(4)
+    WaldorfAndStatler.stub(:roll_die).and_return(4)
     
     @playlist.play
     
@@ -47,7 +47,7 @@ describe Playlist do
   end
   
   it "gives the movie a thumbs down if a low number is rolled" do
-    @playlist.stub(:roll_die).and_return(2)
+    WaldorfAndStatler.stub(:roll_die).and_return(2)
     
     @playlist.play
     
