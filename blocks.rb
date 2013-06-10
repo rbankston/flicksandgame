@@ -8,4 +8,3 @@ end
 
 puts number
 
-4 minutes
