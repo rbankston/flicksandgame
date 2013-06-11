@@ -8,4 +8,4 @@ playlist = Playlist.new("Kermit")
 playlist.add_movie(movie1)
 playlist.add_movie(movie2)
 playlist.add_movie(movie3)
-playlist.play
+playlist.play(3)

@@ -14,14 +14,16 @@ class Playlist
     @movies << a_movie
   end
 
-  def play
+  def play(viewing)
     puts "#{@name}'s playlist:"
     
     puts @movies
-  
-    @movies.each do |movie|
-      WaldorfAndStatler.review(movie)
-      puts movie
+    1.upto(viewing) do |count|
+      puts "\nViewing #{count}:"
+      @movies.each do |movie|
+        WaldorfAndStatler.review(movie)
+        puts movie
+      end
     end
   end
 end
