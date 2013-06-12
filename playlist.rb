@@ -14,6 +14,19 @@ class Playlist
     @movies << a_movie
   end
 
+
+  def print_stats
+    puts "\n#{@names}'s Stats:"
+  
+    hits, flops = @movies.partition { |movie| movie.hit? }
+  
+    puts "\nHits:"
+    puts hits
+  
+    puts "\nFlops:"
+    puts flops
+  end 
+  
   def play(viewing)
     puts "#{@name}'s playlist:"
     

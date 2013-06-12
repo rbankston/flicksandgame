@@ -9,3 +9,4 @@ playlist.add_movie(movie1)
 playlist.add_movie(movie2)
 playlist.add_movie(movie3)
 playlist.play(3)
+playlist.print_stats
