@@ -16,6 +16,10 @@ class Movie
     @rank -= 1
   end
   
+  def <=>(other_movie)
+    other_movie.rank <=> @rank
+  end
+  
   def hit?
     @rank >= 10
   end

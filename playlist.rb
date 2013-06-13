@@ -21,14 +21,16 @@ class Playlist
     hits, flops = @movies.partition { |movie| movie.hit? }
   
     puts "\nHits:"
-    puts hits
+    puts hits.sort
   
     puts "\nFlops:"
-    puts flops
+    puts flops.sort
   end 
   
   def play(viewing)
     puts "#{@name}'s playlist:"
+   
+    puts @movies.sort
     
     puts @movies
     1.upto(viewing) do |count|
