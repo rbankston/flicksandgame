@@ -13,4 +13,4 @@ knuckleheads.add_player(player2)
 knuckleheads.add_player(player3)
 knuckleheads.add_player(player4)
 knuckleheads.add_player(player5)
-knuckleheads.play
+knuckleheads.play(3)

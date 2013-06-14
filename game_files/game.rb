@@ -14,14 +14,19 @@ class Game
   
   attr_reader :title
   
-  def play
+  def play(rounds)
     puts "There are #{@players.count} in #{title}: "
+    
     @players.each do |player| 
       puts player
     end 
-    @players.each do |player|
-      GameTurn.take_turn(player)
-      puts player
-    end
+    
+   1.upto(rounds) do |round|
+     puts "\nRound #{round}:"
+       @players.each do |player|
+         GameTurn.take_turn(player)
+         puts player
+       end
+     end
   end
 end
