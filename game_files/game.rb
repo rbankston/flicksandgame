@@ -15,8 +15,20 @@ class Game
   attr_reader :title
   
   def print_stats
-    strong_player = @players.select { |player| player.strong? }
+    strong_players = @players.select { |player| player.strong? }
     wimpy_players = @players.reject { |player| player.strong? }
+    
+    puts "\n#{title} Statistics:"
+    
+    puts "\n#{strong_players.size} strong players:"
+    strong_players.each do |player|
+      puts "#{player.name} (#{player.health})"
+    end
+    
+    puts "\n#{wimpy_players.size} wimpy players:"
+    wimpy_players.each do |player|
+      puts "#{player.name} (#{player.health})"
+    end  
   end
   
   def play(rounds)
