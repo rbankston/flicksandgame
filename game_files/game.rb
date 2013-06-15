@@ -14,6 +14,11 @@ class Game
   
   attr_reader :title
   
+  def print_stats
+    strong_player = @players.select { |player| player.strong? }
+    wimpy_players = @players.reject { |player| player.strong? }
+  end
+  
   def play(rounds)
     puts "There are #{@players.count} in #{title}: "
     
