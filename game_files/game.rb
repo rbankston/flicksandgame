@@ -31,6 +31,8 @@ class Game
     end  
   end
   
+  sorted_player = @players.sort { |a, b| b.score <=> a.score}
+  
   def play(rounds)
     puts "There are #{@players.count} in #{title}: "
     
