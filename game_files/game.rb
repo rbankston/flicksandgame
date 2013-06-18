@@ -29,9 +29,15 @@ class Game
     wimpy_players.each do |player|
       puts "#{player.name} (#{player.health})"
     end  
-  end
   
-  sorted_player = @players.sort { |a, b| b.score <=> a.score}
+    sorted_players = @players.sort { |a, b| b.score <=> a.score}
+  
+    puts "\n#{@title} High Scores:"
+    sorted_players.each do |player|
+      formatted_name = player.name.ljust(20, '.')
+      puts "#{formatted_name} #{player.score}"
+    end
+  end
   
   def play(rounds)
     puts "There are #{@players.count} in #{title}: "
