@@ -45,6 +45,20 @@ describe Player do
     end
   end
   
+  context "in a collection of players" do
+    before do
+      @player1 = Player.new("moe", 100)
+      @player2 = Player.new("larry", 200)
+      @player3 = Player.new("curly", 300)
+      
+      @players = [@player1, @player2, @player3]
+    end
+    
+    it "is sorted by decreasing score" do
+      @players.sort.should == [@player3, @player2, @player1]
+    end
+  end
+  
   context "it is weak with health less than 100" do
     before do
       @player = Player.new("larry", 50)
