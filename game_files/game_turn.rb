@@ -12,5 +12,7 @@ module GameTurn
     else
       puts "#{player.name} was skipped"
     end
+    treasure = TreasureTrove.random
+    puts "#{player.name} found a #{treasure.name} worth #{treasure.points} points."
   end
 end
